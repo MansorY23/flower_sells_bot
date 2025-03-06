@@ -10,11 +10,10 @@ print(load_dotenv(find_dotenv()))
 @dataclass
 class DBConfig:
     host: str = os.environ.get('POSTGRES_HOST')
-    port: int = os.getenv('POSTGRES_PORT', 5432)
+    port: int = os.getenv('POSTGRES_PORT')
     password: str = os.environ.get('POSTGRES_PASSWORD')
     username: str = os.environ.get('POSTGRES_USERNAME')
-    #database: str = os.getenv('POSTGRES_DB', 'postgres')
-    database: str = 'postgres'
+    database: str = os.getenv('POSTGRES_DB', 'postgres')
     db_driver: str = "postgresql+asyncpg"
 
     db_pool_size: int = 5
