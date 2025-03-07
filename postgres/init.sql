@@ -108,7 +108,7 @@ insert into public.product (product_name, price) values
 		('Огненные тюльпаны', 130)
 ;
 
-INSERT INTO public.product_flower_point (product_id, flower_point_id, quantity) values 
+INSERT INTO public.stock (product_id, flower_point_id, quantity) values 
 	(1, 1, 500),
 	(1, 2, 500),
 	(1, 3, 500),
